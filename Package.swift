@@ -25,19 +25,27 @@ let package = Package(
       targets: ["LiftoffMonetizeAdapterTarget"]
     )
   ],
+  dependencies: [
+    .package(
+      name: "VungleAdsSDK",
+      url: "https://github.com/Vungle/VungleAdsSDK-SwiftPackageManager.git",
+      from: "7.5.2"
+    )
+  ],
   targets: [
     .target(
       name: "LiftoffMonetizeAdapterTarget",
       dependencies: [
-        .target(name: "Adapter")
+        .target(name: "LiftoffMonetizeAdapter"),
+        .product(name: "VungleAdsSDK", package: "VungleAdsSDK"),
       ],
       path: "LiftoffMonetizeAdapterTarget"
     ),
     .binaryTarget(
-      name: "Adapter",
+      name: "LiftoffMonetizeAdapter",
       url:
         "https://dl.google.com/googleadmobadssdk/mediation/ios/liftoffmonetize/LiftoffMonetizeAdapter-7.5.2.0.zip",
-      checksum: ""
+      checksum: "326105262019a5f9eda6a80207d19d2f5a1678f0d4fd1392b2277684ccd5979e"
     ),
   ]
 )
