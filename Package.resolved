@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "VungleAdsSDK",
+        "repositoryURL": "https://github.com/Vungle/VungleAdsSDK-SwiftPackageManager.git",
+        "state": {
+          "branch": null,
+          "revision": "ba979b52fe380523b2072720da495d38a8cf9714",
+          "version": "7.6.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
